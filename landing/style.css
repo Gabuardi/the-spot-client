@@ -1,0 +1,11 @@
+.login-modal .modal-content {
+  border-radius: 0;
+}
+
+.main-btn {
+  border: none;
+  color: #FFF;
+  font-size: 18px;
+  font-weight: 200;
+  background-color: #f2184f;
+}

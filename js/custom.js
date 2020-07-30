@@ -1,31 +1,31 @@
 (function($) {
     "use strict";
-	
+
 	/* ..............................................
-	Loader 
+	Loader
     ................................................. */
-	
-	$(window).on('load', function() { 
-		$('.preloader').fadeOut(); 
-		$('#preloader').delay(550).fadeOut('slow'); 
+
+	$(window).on('load', function() {
+		$('.preloader').fadeOut();
+		$('#preloader').delay(550).fadeOut('slow');
 		$('body').delay(450).css({'overflow':'visible'});
 	});
-    	
+
 	/* ..............................................
     Navbar Bar
     ................................................. */
-	
+
 	$('.navbar-nav .nav-link').on('click', function() {
 		var toggle = $('.navbar-toggler').is(':visible');
 		if (toggle) {
 			$('.navbar-collapse').collapse('hide');
 		}
 	});
-	
+
 	/* ..............................................
     Fixed Menu
     ................................................. */
-    
+
 	$(window).on('scroll', function () {
 		if ($(window).scrollTop() > 50) {
 			$('.top-header').addClass('fixed-menu');
@@ -56,7 +56,7 @@
 	/* ..............................................
     Gallery
     ................................................. */
-	
+
 	$(document).ready(function() {
 		$('.popup-gallery').magnificPopup({
 			delegate: 'a',
@@ -76,11 +76,11 @@
 			}
 		});
 	});
-	
+
 	/* ..............................................
     Scroll To Top
     ................................................. */
-	
+
 	$(document).ready(function () {
 
 		$(window).scroll(function () {
@@ -99,9 +99,14 @@
 		});
 
 	});
-	
-	
 
-	
+
+	/* ..............................................
+    Open LogIn Modal
+    ................................................. */
+	// $('#open-login-btn').click(() => {
+		$('#login-modal').modal('show');
+	// });
+
 }(jQuery));
 
