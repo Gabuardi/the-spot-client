@@ -72,7 +72,7 @@
   margin: 0;
   position: absolute;
   font-size: 14px;
-  z-index: 1;
+  cursor: pointer;
   transition: .4s;
 }
 
