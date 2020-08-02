@@ -1,25 +1,34 @@
-/*------------------------------------------------------------------
-    IMPORT FONTS
-------------------------------------------------------------------*/
+/* --------------------------------------------- */
+/* IMPORT FONTS */
+/* --------------------------------------------- */
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
-/*------------------------------------------------------------------
-    GENERAL
--------------------------------------------------------------------*/
+/* --------------------------------------------- */
+/* GENERAL */
+/* --------------------------------------------- */
 :root {
-  --primary-color: #12B976;
-  --dark-base: #343434
+  --primary-color: #12c27f;
+  --dark-primary-color: #129156;
+  --dark-base: #1f1f1f
 }
 
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.80857;
   color: #666666;
 }
 
+h1 {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+/* --------------------------------------------- */
+/* NAV */
+/* --------------------------------------------- */
 nav {
   height: 85px;
   background-color: #FFF;
@@ -35,25 +44,108 @@ nav {
 
 .the-spot-logo img {
   width: 47px;
+  margin-right: 15px;
 }
-
 
 .the-spot-logo:hover {
   font-size: 40px;
   color: var(--primary-color);
 }
 
-
-/*------------------------------------------------------------------
-    LAYOUT
--------------------------------------------------------------------*/
+/* --------------------------------------------- */
+/* LAYOUT */
+/* --------------------------------------------- */
 .dark-body {
   background-color: var(--dark-base);
 }
 
 .dark-body-container {
   margin: 20px auto;
-  border-radius: 3px;
-  background-color: white;
-  height: 400px;
+  padding: 40px;
+  border-radius: 1px;
+  background-color: #FFF;
+}
+
+/* -------------------------------- */
+/* BUTTONS */
+/* -------------------------------- */
+
+/* ~~~~~~~~~~~~~~~~~~~ */
+/* REGULAR BUTTON */
+/* ~~~~~~~~~~~~~~~~~~~ */
+.spt-button {
+  padding: 13px;
+  border: none;
+  color: #FFF;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: var(--primary-color);
+  transition-property: box-shadow, background-color, transform;
+  transition-duration: 0.3s;
+}
+
+.spt-button:hover {
+  background-color: var(--dark-primary-color);
+  box-shadow: 0 -2px 5px 0 #A0A0A0;
+  transform: scale(1.01);
+}
+
+.spt-button:active {
+  background-color: #127d43;
+  outline: none;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~ */
+/* BACK BUTTON */
+/* ~~~~~~~~~~~~~~~~~~~ */
+
+
+/* --------------------------------------------- */
+/* INPUTS */
+/* --------------------------------------------- */
+.spt-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.spt-input > input,
+.spt-input > select {
+  padding: 5px 10px;
+  border: 2px solid #EAE9E8;
+  outline: none;
+  color: var(--dark-base);
+  background-color: #EAE9E8;
+  transition: border 0.2s;
+}
+
+.spt-input > input:focus,
+.spt-input > select:focus {
+  border: 2px solid var(--primary-color);
+}
+
+.spt-input > label,
+.spt-input > label{
+  font-weight: 600;
+  margin: 0;
+}
+
+.spt-input > input[readonly] {
+  color: var(--primary-color);
+  cursor: copy;
+  border-color: #EAE9E8;
+
+}
+
+.spt-input > input[readonly]:active {
+   border-color: var(--primary-color);
+   cursor: copy;
+ }
+
+.spt-input > select {
+  padding-right: 35px;
+  background-image: url("../images/narrow.svg") ;
+  background-position: 92% center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  appearance: none;
 }
