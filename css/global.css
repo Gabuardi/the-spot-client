@@ -3,7 +3,6 @@
 /* --------------------------------------------- */
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-
 /* --------------------------------------------- */
 /* GENERAL */
 /* --------------------------------------------- */
@@ -69,7 +68,6 @@ nav {
 /* -------------------------------- */
 /* BUTTONS */
 /* -------------------------------- */
-
 /* ~~~~~~~~~~~~~~~~~~~ */
 /* REGULAR BUTTON */
 /* ~~~~~~~~~~~~~~~~~~~ */
@@ -98,7 +96,26 @@ nav {
 /* ~~~~~~~~~~~~~~~~~~~ */
 /* BACK BUTTON */
 /* ~~~~~~~~~~~~~~~~~~~ */
+.spt-back-button {
+  font-size: 19px;
+  font-weight: 400;
+  color: #666;
+}
 
+.spt-back-button:hover {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: color 0.3s;
+}
+
+.spt-back-button svg {
+  margin-right: 8px;
+  transition: transform 0.3s;
+}
+
+.spt-back-button:hover svg {
+  transform: translateX(-3px);
+}
 
 /* --------------------------------------------- */
 /* INPUTS */
@@ -124,7 +141,7 @@ nav {
 }
 
 .spt-input > label,
-.spt-input > label{
+.spt-input > label {
   font-weight: 600;
   margin: 0;
 }
@@ -133,17 +150,16 @@ nav {
   color: var(--primary-color);
   cursor: copy;
   border-color: #EAE9E8;
-
 }
 
 .spt-input > input[readonly]:active {
-   border-color: var(--primary-color);
-   cursor: copy;
- }
+  border-color: var(--primary-color);
+  cursor: copy;
+}
 
 .spt-input > select {
   padding-right: 35px;
-  background-image: url("../images/narrow.svg") ;
+  background-image: url("../images/narrow.svg");
   background-position: 92% center;
   background-repeat: no-repeat;
   background-size: 20px;
