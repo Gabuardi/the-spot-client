@@ -1,8 +1,22 @@
+/* ==============================================
+ CONTENT INDEX
+=================================================
+-| IMPORT FONTS
+-| GENERAL
+-| NAV
+-| LAYOUT
+-| BUTTONS
+--------| REGULAR BUTTON
+--------| BACK BUTTON
+-| INPUTS
+================================================= */
+
 /* --------------------------------------------- */
 /* IMPORT FONTS */
 /* --------------------------------------------- */
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
 /* --------------------------------------------- */
 /* GENERAL */
 /* --------------------------------------------- */
@@ -23,6 +37,11 @@ body {
 h1 {
   font-weight: bold;
   color: var(--primary-color);
+}
+
+H5 {
+  font-size: 18px;
+  margin: 0;
 }
 
 /* --------------------------------------------- */
