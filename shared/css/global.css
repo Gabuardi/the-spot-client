@@ -6,9 +6,12 @@
 -| NAV
 -| LAYOUT
 -| BUTTONS
---------| REGULAR BUTTON
---------| BACK BUTTON
+------| REGULAR BUTTON
+------| BACK BUTTON
 -| INPUTS
+------| TOGGLE SWITCH
+-| MODALS
+------| LOG IN MODAL
 ================================================= */
 
 /* --------------------------------------------- */
@@ -39,9 +42,11 @@ h1 {
   color: var(--primary-color);
 }
 
-H5 {
-  font-size: 18px;
+h5 {
   margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 /* --------------------------------------------- */
@@ -183,4 +188,93 @@ nav {
   background-repeat: no-repeat;
   background-size: 20px;
   appearance: none;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~ */
+/* TOGGLE SWITCH */
+/* ~~~~~~~~~~~~~~~~~~~ */
+.spt-switch {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 122px;
+  height: 34px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.spt-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.spt-switch label {
+  margin: 0;
+  position: absolute;
+  font-size: 14px;
+  cursor: pointer;
+  transition: .4s;
+}
+
+.spt-switch label.disabled-lb {
+  right: 10px;
+}
+
+.spt-switch label.enabled-lb {
+  left: -52px;
+}
+
+.spt-switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid var(--primary-color);
+  border-radius: 34px;
+  transition: .4s;
+}
+
+.spt-switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 2px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  transition: .4s;
+}
+
+.spt-switch input:checked + .slider:before,
+.spt-switch input:checked ~ label.disabled-lb,
+.spt-switch input:checked ~ label.enabled-lb {
+  transform: translateX(85px);
+}
+
+/* --------------------------------------------- */
+/* MODALS */
+/* --------------------------------------------- */
+/* ~~~~~~~~~~~~~~~~~~~ */
+/* LOG IN MODAL */
+/* ~~~~~~~~~~~~~~~~~~~ */
+.login-modal .modal-content {
+  border-radius: 0;
+}
+
+.login-modal h5 {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.login-modal h5:hover:not(.active) {
+  opacity: 1;
+}
+
+.login-modal h5.active {
+  opacity: 1;
+  color: var(--primary-color);
 }
