@@ -2,32 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
-
-  <!-- Site Metas -->
   <title>The Spot</title>
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="../../shared/css/bootstrap.min.css"/>
-  <!-- Site CSS -->
+  <!-- external resources -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link rel="stylesheet" href="../../shared/css/global.css">
-  <link rel="stylesheet" href="../../shared/css/style.css"/>
-
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="local.css">
 </head>
-
-<body id="movies" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
-
-<!-- LOADER -->
-<div id="preloader">
-  <div class="loader">
-    <img src="../images/loader.gif" alt="#"/>
-  </div>
-</div>
-<!-- end loader -->
-<!-- END LOADER -->
 
 <!-- Start header -->
 <header class="top-header">
@@ -79,7 +60,7 @@
 <!-- end section -->
 
 <!-- -------------------------------------------------------------------- -->
-<!-- LOG IN MODAL -->
+<!-- LOG IN / SIGN IN MODAL -->
 <!-- -------------------------------------------------------------------- -->
 <div id="login-modal" class="login-modal modal" tabindex="-1" role="dialog">
   <div class="modal-dialog">
@@ -94,48 +75,49 @@
       <div class="modal-body">
         <!---------<< LOG IN >>-------->
         <form id="login-form">
-          <div class="d-flex flex-column">
-            <label for="username-input" class="mb-0">USERNAME</label>
-            <input id="username-input" type="text" class="main-input">
+          <div class="spt-input">
+            <label>USERNAME</label>
+            <input type="text" placeholder="Enter your username" aria-label="username">
           </div>
-          <div class="d-flex flex-column mt-2">
-            <label for="password-input" class="mb-0">PASSWORD</label>
-            <input id="password-input" type="password" class="main-input">
+          <div class="spt-input mt-2">
+            <label>PASSWORD</label>
+            <input type="password" placeholder="Enter your password" aria-label="password">
           </div>
           <label id="user-type-switch" class="switch mt-3">
-            <input type="checkbox">
+            <input type="checkbox" aria-label="staff login">
             <span class="slider round"></span>
             <label class="disabled-lb">CUSTOMER</label>
             <label class="enabled-lb">STAFF</label>
           </label>
-          <div class="mt-4 d-flex justify-content-center">
-            <button class="main-btn w-100">LOG IN</button>
+          <div class="mt-5 d-flex justify-content-center">
+            <button class="spt-button w-100">LOG IN</button>
           </div>
         </form>
         <!---------<< CREATE ACCOUNT >>-------->
-        <form id="signin-form" class="d-none">
-          <div class="d-flex flex-column">
-            <label class="mb-0">FIRST NAME</label>
-            <input type="text" class="main-input" aria-label="fist name">
+        <form id="signin-form" class="row d-none">
+          <div class="spt-input col-6">
+            <label>FIRST NAME</label>
+            <input type="text" placeholder="Enter your first name" aria-label="fist name">
           </div>
-          <div class="d-flex flex-column mt-2">
-            <label class="mb-0">LAST NAME</label>
-            <input type="text" class="main-input" aria-label="last name">
+          <div class="spt-input col-6">
+            <label>LAST NAME</label>
+            <input type="text" placeholder="Enter your last name(s)" aria-label="last name">
           </div>
-          <div class="d-flex flex-column mt-2">
-            <label class="mb-0">USERNAME</label>
-            <input type="text" class="main-input" aria-label="username">
+          <div class="spt-input mt-2 col-6">
+            <label>USERNAME</label>
+            <input type="text" placeholder="Choose an username" aria-label="username">
           </div>
-          <div class="d-flex flex-column mt-2">
-            <label class="mb-0">EMAIL ADDRESS</label>
-            <input type="text" class="main-input" aria-label="email">
+          <div class="spt-input mt-2 col-6">
+            <label>PASSWORD</label>
+            <input type="password" placeholder="Create a password" aria-label="password">
           </div>
-          <div class="d-flex flex-column mt-2">
-            <label class="mb-0">PASSWORD</label>
-            <input type="password" class="main-input" aria-label="last name">
+          <div class="spt-input mt-2 col-12">
+            <label>EMAIL ADDRESS</label>
+            <input type="text" placeholder="Enter an email address" aria-label="email">
           </div>
-          <div class="mt-4 d-flex justify-content-center">
-            <button class="main-btn w-100">SIGN IN</button>
+
+          <div class="mt-5 col-12">
+            <button class="spt-button w-100">SIGN IN</button>
           </div>
         </form>
       </div>
