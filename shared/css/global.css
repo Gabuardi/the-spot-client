@@ -26,7 +26,8 @@
 :root {
   --primary-color: #12c27f;
   --dark-primary-color: #129156;
-  --dark-base: #1f1f1f
+  --dark-base: #1f1f1f;
+  --semi-dark-base: #A5A5A5;
 }
 
 body {
@@ -42,11 +43,22 @@ h1 {
   color: var(--primary-color);
 }
 
+h2 {
+  color: var(--semi-dark-base);
+}
+
 h5 {
   margin: 0;
   padding: 0;
   font-size: 18px;
   font-weight: bold;
+}
+
+/* --------------------------------------------- */
+/* BOOTSTRAP OVERWRITE */
+/* --------------------------------------------- */
+table {
+  background-color: #FFF;
 }
 
 /* --------------------------------------------- */
@@ -83,7 +95,7 @@ nav {
 }
 
 .dark-body-container {
-  margin: 20px auto;
+  margin: 70px auto 40px;
   padding: 40px;
   border-radius: 1px;
   background-color: #FFF;
@@ -106,15 +118,15 @@ nav {
   transition-duration: 0.3s;
 }
 
-.spt-button:hover {
+.spt-button:hover,
+.spt-button:focus {
   background-color: var(--dark-primary-color);
-  box-shadow: 0 -2px 5px 0 #A0A0A0;
   transform: scale(1.01);
+  outline: none;
 }
 
 .spt-button:active {
   background-color: #127d43;
-  outline: none;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~ */
