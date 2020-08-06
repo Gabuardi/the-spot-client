@@ -188,6 +188,8 @@ nav {
   background-color: var(--dark-primary-color);
   transform: scale(1.01);
   outline: none;
+  color: #FFF;
+  text-decoration: none;
 }
 
 .spt-button:active {
