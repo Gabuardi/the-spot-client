@@ -19,7 +19,6 @@
 /* --------------------------------------------- */
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-
 /* --------------------------------------------- */
 /* GENERAL */
 /* --------------------------------------------- */
@@ -46,6 +45,7 @@ h1 {
 
 h2 {
   color: var(--semi-dark-base);
+  margin: 0;
 }
 
 h5 {
@@ -58,8 +58,56 @@ h5 {
 /* --------------------------------------------- */
 /* BOOTSTRAP OVERWRITE */
 /* --------------------------------------------- */
-table {
+.table {
   background-color: #FFF;
+}
+
+.dropdown-toggle {
+  padding: 5px 10px;
+  display: flex;
+  border-radius: 0;
+  align-items: center;
+  background-color: #EAE9E8;
+  border: 2px solid #EAE9E8 !important;
+  height: 42px;
+}
+
+.dropdown-toggle::after {
+  width: 20px;
+  height: 13px;
+  position: absolute;
+  right: 8px;
+  border: none;
+  background-image: url("../images/narrow.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bootstrap-select .dropdown-toggle:focus {
+  outline: none !important;
+}
+
+.dropdown-menu {
+  border-radius: 0;
+  border: 0;
+  background-color: #EAE9E8;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+  background-color: #CACACA;
+}
+
+.bootstrap-select > .dropdown-toggle.bs-placeholder {
+  color: #828282;
+}
+
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+  width: 100%;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: var(--primary-color);
 }
 
 /* --------------------------------------------- */
@@ -100,12 +148,15 @@ nav {
   color: var(--primary-color);
 }
 
-
 /* --------------------------------------------- */
 /* LAYOUT */
 /* --------------------------------------------- */
 .dark-body {
   background-color: var(--dark-base);
+}
+
+.alternative-dark-background {
+  background-color: var(--alternative-dark);
 }
 
 .dark-body-container {
