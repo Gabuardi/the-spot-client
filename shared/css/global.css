@@ -25,8 +25,9 @@
 /* --------------------------------------------- */
 :root {
   --primary-color: #12c27f;
-  --dark-primary-color: #129156;
+  --dark-primary-color: #0a4c2a;
   --dark-base: #1f1f1f;
+  --alternative-dark: #323232;
   --semi-dark-base: #A5A5A5;
 }
 
@@ -86,6 +87,19 @@ nav {
   font-size: 40px;
   color: var(--primary-color);
 }
+
+.nav-links a {
+  color: var(--alternative-dark);
+  transition: color 0.4s;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 20px;
+}
+
+.nav-links a:hover {
+  color: var(--primary-color);
+}
+
 
 /* --------------------------------------------- */
 /* LAYOUT */
