@@ -48,6 +48,11 @@ h2 {
   color: var(--semi-dark-base);
 }
 
+h4 {
+  font-weight: 300;
+  margin: 0;
+}
+
 h5 {
   margin: 0;
   padding: 0;
