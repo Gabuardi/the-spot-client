@@ -1,0 +1,8 @@
+#card-modal-label {
+    opacity: 1;
+    color: var(--primary-color);
+}
+
+#reload-cards-btn {
+    cursor: pointer;
+}
