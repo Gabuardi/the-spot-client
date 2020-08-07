@@ -6,6 +6,10 @@
   color: var(--semi-dark-base);
 }
 
+.greeting-bar span {
+  color: var(--primary-color);
+}
+
 a.management-option {
   width: 220px;
   height: 220px;
