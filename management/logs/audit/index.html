@@ -8,20 +8,20 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/solid.js" integrity="sha384-4RG3cEPIlCBy6VNzxM9ZoEwZW+65ed5JDOfaJAnQqwV6ha/jZDJTXjFmvjFM4bk4" crossorigin="anonymous"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/fontawesome.js" integrity="sha384-DNo9bmYZCHLtp0n0l0XA2UsoRHX1nx38aRP+p9yoP5A8kVTfeWG3aySMOq5FD/v3" crossorigin="anonymous"></script>
-  <link rel="stylesheet" type="text/css" href="../../shared/css/global.css">
+  <link rel="stylesheet" type="text/css" href="../../../shared/css/global.css">
   <link rel="stylesheet" type="text/css" href="local.css">
 </head>
 <body class="dark-body">
 
 <!-- ---------------------------- -->
 <nav class="container-fluid px-5 d-flex align-items-center">
-  <div class="the-spot-logo color-test"><img src="../../shared/images/play-logo.svg" alt="">THE SPOT</div>
+  <div class="the-spot-logo color-test"><img src="../../../shared/images/play-logo.svg" alt="">THE SPOT</div>
   <h2 class="ml-4 py-2 pl-3 border-left">Management</h2>
 </nav>
 
 <div class="container py-5 d-flex flex-column align-items-stretch">
 
-  <h1 class="text-center mt-4 mb-5">ERRORS</h1>
+  <h1 class="text-center mt-4 mb-5">AUDIT LOGS</h1>
   <div class="input-group justify-content-end size-input-group">
     <input type="date" class="form-control">
     <div class="input-group-prepend">
@@ -32,24 +32,54 @@
   <table class="table table-striped">
     <thead class="thead-dark">
       <tr>
+        <th scope="col" class="d-flex">Username
+          <div class="dropdown">
+            <a class="dropdown-toggle dropdown-toggle-split colorize-a" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="#">Gabuardi</a>
+              <a class="dropdown-item" href="#">Alonso</a>
+              <a class="dropdown-item" href="#">Somebody</a>
+            </div>
+          </div>
+        </th>
         <th scope="col">ID</th>
+        <th scope="col" class="d-flex">Type
+          <div class="dropdown">
+            <a class="dropdown-toggle dropdown-toggle-split colorize-a" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="#">INSERT</a>
+              <a class="dropdown-item" href="#">UPDATE</a>
+              <a class="dropdown-item" href="#">REMOVE</a>
+            </div>
+          </div>
+        </th>
         <th scope="col">Description</th>
-        <th scope="col">Date</th>
+        <th scope="col">Info</th>
+        <th scope="col">Created</th>
       </tr>
     </thead>
     <tbody>
       <tr>
+        <td>Gabuardi</td>
         <td>#2341</td>
+        <td>INSERT</td>
+        <td>User inserter new book</td>
         <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, optio!</td>
         <td>8/1/2020 - 12:00:00 AM</td>
       </tr>
       <tr>
+        <td>Gabuardi</td>
         <td>#2198</td>
+        <td>UPDATE</td>
+        <td>User updated release year of song</td>
         <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, debitis.</td>
         <td>8/1/2020 - 12:00:00 AM</td>
       </tr>
       <tr>
+        <td>Gabuardi</td>
         <td>#2374</td>
+        <td>INSERT</td>
+        <td>User inserted new book</td>
         <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim, aliquam?</td>
         <td>8/1/2020 - 12:00:00 AM</td>
       </tr>
