@@ -343,8 +343,9 @@ nav {
 /* ERROR MESSAGES */
 /* ~~~~~~~~~~~~~~~~~~~ */
 .error, .custom-error {
-  font-weight: 400;
+  font-weight: 500;
   color: #d82f2a;
+  margin-bottom: 0;
 }
 
 /* --------------------------------------------- */
